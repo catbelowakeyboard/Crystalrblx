@@ -79,7 +79,7 @@ local Dropdown = RC:CreateDropdown({
 })
 
 local cookieclicker = RC:CreateButton({
-   Name = "Cookie Clicker",
+   Name = "Crystal | Cookie Clicker",
    Callback = function()
    loadstring(game:HttpGet('https://raw.githubusercontent.com/catbelowakeyboard/Crystalrblx/refs/heads/main/cookielauncherb4re.lua'))()
    end,
