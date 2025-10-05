@@ -45,7 +45,7 @@ local credit = info:CreateParagraph({Title = "Credits", Content = "First - UI an
 local Dropdown = RC:CreateDropdown({
    Name = "Crystal | Radar chasers",
    Options = {"V1","V1.12","V1.3","V2"},
-   CurrentOption = {"V2"},
+   CurrentOption = {""},
    MultipleOptions = false,
    Flag = "RCdrop", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Options)
