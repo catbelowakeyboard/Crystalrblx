@@ -1,6 +1,6 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
-   Name = "Crystal | Main hub",
+   Name = "Crystal Launcher",
    Icon = "archive-restore", -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "Crystal - Storage",
    LoadingSubtitle = "by Sun and First",
