@@ -37,7 +37,8 @@ local Window = Rayfield:CreateWindow({
 })
 
 local info = Window:CreateTab("Info and Credits", "info") -- Title, Image
-local RC = Window:CreateTab("Crystal | Tornado games!", "radar") -- Title, Image
+local universal = Window:CreateTab("Crystal | Tornado games!", "radar") -- Title, Image
+local RC = Window:CreateTab("Crystal | Tornado games!", "moon-star") -- Title, Image
 
 local thanks = info:CreateLabel("Thank you for using this script!", "check")
 local credit = info:CreateParagraph({Title = "Credits", Content = "First - UI and functionality | Sun - Backend scripter"})
@@ -58,5 +59,12 @@ local Dropdown = RC:CreateDropdown({
       else
         loadstring(game:HttpGet("https://raw.githubusercontent.com/catbelowakeyboard/Crystalrblx/refs/heads/main/CrystalV2%20-%20Customization.lua"))()
          end
+   end,
+})
+
+local Button = universal:CreateButton({
+   Name = "Load infinite yeild",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/DarkNetworks/Infinite-Yield/main/latest.lua'))()
    end,
 })
