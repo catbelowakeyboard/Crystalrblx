@@ -58,12 +58,7 @@ local Dropdown = versions:CreateDropdown({
    Image = "message-circle-warning",
 })
     else
-        Rayfield:Notify({
-   Title = "Version Not Finished (err: 738)",
-   Content = "Seems like this version isnt finished yet...",
-   Duration = 10,
-   Image = "message-circle-warning",
-})
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/catbelowakeyboard/Crystalrblx/refs/heads/main/cookiepremium.lua'))()
     end
    end,
 })
