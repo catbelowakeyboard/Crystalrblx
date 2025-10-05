@@ -1,5 +1,7 @@
 local TP = game:GetService("TeleportService")
 local ttpiwp = false
+local Players = game:getService("Players")
+local player = Players.LocalPlayer
 
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
@@ -54,26 +56,25 @@ local Dropdown = RC:CreateDropdown({
    MultipleOptions = false,
    Flag = "RCdrop", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Options)
-   if game.PlaceId == 16897450052 then
+    
+    if game.PlaceId == 16897450052 then
         if Options[1] == "V1" then
-           loadstring(game:HttpGet("https://raw.githubusercontent.com/catbelowakeyboard/Crystalrblx/refs/heads/main/CrystalV.1.lua"))()
+              loadstring(game:HttpGet("https://raw.githubusercontent.com/catbelowakeyboard/Crystalrblx/refs/heads/main/CrystalV.1.lua"))()
         elseif Options[1] == "V1.12" then
-           loadstring(game:HttpGet("https://raw.githubusercontent.com/catbelowakeyboard/Crystalrblx/refs/heads/main/CrystalV1.12%20-%20MINOR%20FIX%20AGAIN.lua"))()
+              loadstring(game:HttpGet("https://raw.githubusercontent.com/catbelowakeyboard/Crystalrblx/refs/heads/main/CrystalV1.12%20-%20MINOR%20FIX%20AGAIN.lua"))()
         elseif Options[1] == "V1.3" then
-           loadstring(game:HttpGet("https://raw.githubusercontent.com/catbelowakeyboard/Crystalrblx/refs/heads/main/CrystalV1.3.lua"))()
-         else
-           loadstring(game:HttpGet("https://raw.githubusercontent.com/catbelowakeyboard/Crystalrblx/refs/heads/main/CrystalV2%20-%20Customization.lua"))()
-            end
-         if ttpwip == true then
-               TP:TeleportAsync(16897450052)
-         else
+              loadstring(game:HttpGet("https://raw.githubusercontent.com/catbelowakeyboard/Crystalrblx/refs/heads/main/CrystalV1.3.lua"))()
+            else
+               loadstring(game:HttpGet("https://raw.githubusercontent.com/catbelowakeyboard/Crystalrblx/refs/heads/main/CrystalV2%20-%20Customization.lua"))()
+        end
+    else
             Rayfield:Notify({
    Title = "Oops!",
    Content = "Youre in the wrong game! Please join the correct game, via {buttonname}",
    Duration = 12.5,
    Image = "mail-warning",
 })
-         end
+       end
    end,
 })
 
