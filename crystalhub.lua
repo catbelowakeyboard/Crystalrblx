@@ -37,7 +37,7 @@ local Window = Rayfield:CreateWindow({
 })
 
 local info = Window:CreateTab("Info and Credits", "info") -- Title, Image
-local universal = Window:CreateTab("Crystal | Tornado games!", "radar") -- Title, Image
+local universal = Window:CreateTab("Crystal | Universal", "radar") -- Title, Image
 local RC = Window:CreateTab("Crystal | Tornado games!", "moon-star") -- Title, Image
 
 local thanks = info:CreateLabel("Thank you for using this script!", "check")
