@@ -43,7 +43,7 @@ local Window = Rayfield:CreateWindow({
 
 local info = Window:CreateTab("Info and Credits", "info") -- Title, Image
 local universal = Window:CreateTab("Crystal | Universal", "moon-star") -- Title, Image
-local RC = Window:CreateTab("Crystal | Tornado games", "radar") -- Title, Image
+local RC = Window:CreateTab("Crystal | supported Games", "check-check") -- Title, Image
 local settings = Window:CreateTab("Crystal | Settings", "settings") -- Title, Image
 
 local thanks = info:CreateLabel("Thank you for using this script!", "check")
@@ -75,6 +75,13 @@ local Dropdown = RC:CreateDropdown({
    Image = "mail-warning",
 })
        end
+   end,
+})
+
+local cookieclicker = RC:CreateButton({
+   Name = "Cookie Clicker",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/catbelowakeyboard/Crystalrblx/refs/heads/main/cookielauncherb4re.lua'))()
    end,
 })
 
