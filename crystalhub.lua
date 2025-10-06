@@ -10,7 +10,7 @@ local Window = Rayfield:CreateWindow({
    LoadingTitle = "Crystal - Storage",
    LoadingSubtitle = "by Sun and First",
    ShowText = "CDC", -- for mobile users to unhide rayfield, change if you'd like
-   Theme = "Ocean", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+   Theme = "Amethyst", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    ToggleUIKeybind = "K", -- The keybind to toggle the UI visibility (string like "K" or Enum.KeyCode)
 
