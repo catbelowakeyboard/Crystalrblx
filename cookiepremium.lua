@@ -45,8 +45,26 @@ Rayfield:Notify({
 })
 
 
-local auto = Window:CreateTab("Automatic", "table-cells-split") -- Title, Image
-local settings = Window:CreateTab("Settings", "settings") -- Title, Image
+local auto = Window:CreateTab("CCookie | Automatic", "table-cells-split") -- Title, Image
+local settings = Window:CreateTab("CCookie | Settings", "settings") -- Title, Image
+local customize = Window:CreateTab("CCookie | customize", "paintbrush") -- Title, Image-- Title, Image
+
+local Dropdown = customize:CreateDropdown({
+   Name = "Themes",
+   Options = {"Amber Glow","Amethyst","Ocean","More themes SOON!"},
+   CurrentOption = {""},
+   MultipleOptions = false,
+   Flag = "themedrop", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Options)
+    if Options[1] == "Amber Glow" then
+        Window.ModifyTheme('AmberGlow')
+    elseif Options[1] == "Amethyst" then
+        Window.ModifyTheme('Amethyst')
+    else
+        Window.ModifyTheme('Ocean')
+    end
+   end,
+})
 
 local ac = auto:CreateSection("Clicking")
 local autoclicktogg = auto:CreateToggle({
