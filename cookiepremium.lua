@@ -93,7 +93,7 @@ local customautoclick = auto:CreateInput({
 local ab = auto:CreateSection("Auto buying")
 local autobuy = auto:CreateDropdown({
    Name = "Buying:",
-   Options = {"Clicker","grandma"},
+   Options = {"Clicker","Grandma"},
    CurrentOption = {""},
    MultipleOptions = false,
    Flag = "autobuy dropdown", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
@@ -111,11 +111,22 @@ local Toggle = auto:CreateToggle({
        while Value do
            local args = {
 	"Cursor",
-	1,
+	5,
 	true
 }
 game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("BuyBuilding"):FireServer(unpack(args))
-wait(0.05)
+wait(0.01)
+				end
+				elseif userautobuy == "Grandma" then
+					while Value do
+						local args = {
+		"Grandma",
+		5,
+		true
+	}
+	game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("BuyBuilding"):FireServer(unpack(args))
+	wait(0.01)
+
        end
 end
    end,
